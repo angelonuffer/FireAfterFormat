@@ -24,6 +24,7 @@ opcoes=$( dialog --stdout --separate-output                                     
     Refactoring     "Conjunto de scripts para refatoração de código"                                    ON  \
     Git             "Sistema de controle de versão + configurações úteis"                               ON  \
     GitMeldDiff     "Torna o Meld o software para visualização do diff do git"                          ON  \
+    Terminator      "Terminal alternativo ao gnome-terminal"                                            ON  \
     Media           "Codecs, flashplayer (32 ou 64 bits), JRE e compactadores de arquivos"              ON  \
     XChat           "Cliente IRC"                                                                       ON  \
     GoogleChrome    "Navegador web Google Chrome"                                                       ON  )
@@ -156,6 +157,8 @@ do
 
 
     [ "$opcao" = 'XChat' ]              && sudo apt-get install -y xchat
+
+    [ "$opcao" = 'Terminator' ]		&& sudo apt-get install -y Terminator
 
 done
 
