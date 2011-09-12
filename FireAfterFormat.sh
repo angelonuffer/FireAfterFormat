@@ -17,14 +17,15 @@ opcoes=$( dialog --stdout --separate-output                                     
     --title "BernardoFire afterFormat - Pós Formatação para Ubuntu"                                   \
     --checklist 'Selecione os softwares que deseja instalar:' 0 0 0                                         \
     Desktop         "Muda \"Área de Trabalho\" para \"Desktop\" *(Apenas ptBR)"                         ON  \
-    Monaco          "Adiciona fonte Monaco e seleciona para o Terminal"  ON  \
+    Monaco          "Adiciona fonte Monaco e seleciona para o Terminal"				        ON  \
     SSH             "SSH server e client"                                                               ON  \
     Python          "Ambiente para desenvolvimento com python"                                          ON  \
-    VIM             "Editor de texto + configurações úteis"                                             ON  \
+    VIM             "Editor de texto"			                                                ON  \
     Refactoring     "Conjunto de scripts para refatoração de código"                                    ON  \
     Git             "Sistema de controle de versão + configurações úteis"                               ON  \
     GitMeldDiff     "Torna o Meld o software para visualização do diff do git"                          ON  \
     Terminator      "Terminal alternativo ao gnome-terminal"                                            ON  \
+    Django	    "Framework web escrito em Python"							ON  \
     Media           "Codecs, flashplayer (32 ou 64 bits), JRE e compactadores de arquivos"              ON  \
     XChat           "Cliente IRC"                                                                       ON  \
     GoogleChrome    "Navegador web Google Chrome"                                                       ON  )
@@ -159,6 +160,8 @@ do
     [ "$opcao" = 'XChat' ]              && sudo apt-get install -y xchat
 
     [ "$opcao" = 'Terminator' ]		&& sudo apt-get install -y Terminator
+
+    [ "$opcao" = 'Django' ]		&& sudo pip install -U django
 
 done
 
