@@ -80,6 +80,13 @@ do
         sudo apt-get install -y vim
         vim=1
     fi
+    
+    
+    if [ "$opcao" = 'Git' ]
+    then
+        sudo apt-get install -y git-core
+    fi
+        
     if [ "$opcao" = 'Refactoring' ]
     then
         wget -O /tmp/refactoring-scripts.tar.gz http://github.com/hugomaiavieira/refactoring-scripts/tarball/master --no-check-certificate
